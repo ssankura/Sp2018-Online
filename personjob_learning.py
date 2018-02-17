@@ -32,14 +32,15 @@
 	Job:	
 		
 """
-
+import logging
 from personjob_model import *
 
-def printu(message):
-	print(f'---\n\n{message}')
-	print('=' * len(message))
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-printu('PERSON')
+logger.info('Working with Person class')
+logger.info('Note how I use constants and a list of tuples as a simple schema')
+logger.info('Normally you probably will have prompted for this from a user')
 
 PERSON_NAME = 0
 LIVES_IN_TOWN = 1
@@ -53,22 +54,25 @@ people = [
 	('Steven', 'Colchester', None),	
 	]
 
-printu('Creating Person records...')
+logger.info('Creating Person records: iterate through the list of tuples')
 
 for person in people:
+	logger.info('Prepare to explain any errors')
     try:
         with database.transaction():
+        	logger.info('The transaction tells the database to rollback on error')
             new_person = Person.create(
                     person_name = person[PERSON_NAME],
                     lives_in_town = person[LIVES_IN_TOWN],
                     nickname = person[NICKNAME])
             new_person.save()
+            logger.info('Database add successful')
 
     except Exception as e:
         print(f'Error creating = {person[PERSON_NAME]}')
         print(e)
 
-printu('Read and print all Person records we created...')
+logger.info('Read and print all Person records we created...')
 
 for person in Person:
 	print(f'{person.person_name} lives in {person.lives_in_town} and likes to be known as {person.nickname}')

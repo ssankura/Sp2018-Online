@@ -3,13 +3,14 @@
 
 """
 
-from personjobdb import *
+from personjob_model import *
 
-database.connect()
+logger.info('One off program to build the classes from the model in the database')
 
 database.create_tables([
         Job,
-        Person
+        Person,
+		PersonNumKey
     ])
 
 database.close()
