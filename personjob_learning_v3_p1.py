@@ -11,11 +11,8 @@
         5. show logging (to explain what's going on)  
         
 """
-import logging
-from personjob_model import *
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from personjob_model import *
 
 logger.info('Working with Person class')
 logger.info('Note how I use constants and a list of tuples as a simple schema')
@@ -48,14 +45,14 @@ for person in people:
             logger.info('Database add successful')
 
     except Exception as e:
-        print(f'Error creating = {person[PERSON_NAME]}')
-        print(e)
+        logger.info(f'Error creating = {person[PERSON_NAME]}')
+        logger.info(e)
         logger.info('See how the datbase protects our data')
 
 logger.info('Read and print all Person records we created...')
 
 for person in Person:
-    print(f'{person.person_name} lives in {person.lives_in_town} ' +\
+    logger.info(f'{person.person_name} lives in {person.lives_in_town} ' +\
         f'and likes to be known as {person.nickname}')
 
 database.close()
