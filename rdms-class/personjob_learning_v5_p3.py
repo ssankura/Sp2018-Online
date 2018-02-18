@@ -8,12 +8,6 @@
 
 from personjob_model import *
 
-JOB_NAME = 0 
-START_DATE = 1
-END_DATE = 2
-SALARY = 3
-PERSON_EMPLOYED = 4
-
 logger.info('View matching records and Persons without Jobs (note LEFT_OUTER)')
 
 query = (Person
@@ -23,5 +17,19 @@ query = (Person
 
 for person in query:
     logger.info(f'Person {person.person_name} had job {person.job.job_name}')
+
+logger.info('Example of how to summarize data')
+logger.info('Note select() creates a count and names it job_count')
+logger.info('group_by and order_by control level and sorting')
+
+query = (Person
+         .select(Person, fn.COUNT(Job.job_name).alias('job_count'))
+         .join(Job, JOIN.LEFT_OUTER) 
+         .group_by(Person)
+         .order_by(Person.person_name))
+
+for person in query:
+    logger.info(f'{person.person_name} had {person.job_count} jobs')
+        
 
 database.close()

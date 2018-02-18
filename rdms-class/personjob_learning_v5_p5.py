@@ -39,7 +39,7 @@ try:
         new_job.save()
         
 except Exception as e:
-    logger.info('But we get an excpetion')
+    logger.info('But we get an exception')
     logger.info(f'For Job create: {addjob[0]}')
     logger.info(e)
 

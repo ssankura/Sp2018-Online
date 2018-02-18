@@ -14,7 +14,7 @@ from personjob_model import *
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-logger.info('Working with Person class to search, find, update, add and delete')
+logger.info('Working with Person class to search, find')
 
 PERSON_NAME = 0
 LIVES_IN_TOWN = 1
@@ -44,25 +44,5 @@ logger.info('And here is where we prove it by finding Peter and displaying')
 aperson = Person.get(Person.person_name == 'Peter')
 logger.info(f'{aperson.person_name} now has a nickname of {aperson.nickname}')
 
-
-logger.info('Add and display a Person called Fred; then delete him...')
-
-new_person = Person.create(
-    person_name = 'Fred',
-    lives_in_town = 'Seattle',
-    nickname = 'Fearless')
-new_person.save()
-
-aperson = Person.get(Person.person_name == 'Fred')
-
-logger.info(f'We just created {aperson.person_name}, who lives in {aperson.lives_in_town}')
-logger.info('but now we will delete him...')
-
-aperson.delete_instance()
-
-logger.info('Reading and print all Person records (but not Fred; he has been deleted)...')
-
-for person in Person:
-    logger.info(f'{person.person_name} lives in {person.lives_in_town} and likes to be known as {person.nickname}')
 
 database.close()
