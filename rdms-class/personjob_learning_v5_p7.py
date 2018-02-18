@@ -1,9 +1,9 @@
 """
 	Learning persistence with Peewee and sqlite
-	delete the database to start over 
+	delete the database to start over
 		(but running this program does not require it)
-		
-		
+
+
 """
 import logging
 from personjob_model import *
@@ -21,7 +21,7 @@ try:
 		aperson.person_name = 'Peta'
 		aperson.save()
 		logger.info(f'Tried to change Peter to {aperson.person_name}')
-		
+
 except Exception as e:
 	logger.info(f'Cant change a PK and caught you trying') # not caught; no error thrown by Peewee
 	logger.info(e)

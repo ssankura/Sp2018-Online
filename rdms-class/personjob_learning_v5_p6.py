@@ -1,9 +1,9 @@
 """
     Learning persistence with Peewee and sqlite
-    delete the database to start over 
+    delete the database to start over
         (but running this program does not require it)
-        
-        
+
+
 """
 import logging
 from personjob_model import *
@@ -21,7 +21,7 @@ people = [
     ('Peter', 'Seattle', None),
     ('Susan', 'Boston', 'Beannie'),
     ('Pam', 'Coventry', 'PJ'),
-    ('Steven', 'Colchester', None), 
+    ('Steven', 'Colchester', None),
     ]
 
 logger.info('Try creating Person records again: it will fail')
@@ -74,7 +74,7 @@ for person in people:
         logger.info(f'Error creating = {person[0]}')
         logger.info(e)
 
-logger.info('Note no PK specified, no PK violation; "duplicates" created!')     
+logger.info('Note no PK specified, no PK violation; "duplicates" created!')
 
 for person in PersonNumKey.select():
     logger.info(f'Name : {person.person_name} with id: {person.id}')

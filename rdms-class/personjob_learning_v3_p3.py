@@ -1,12 +1,12 @@
 """
 	Learning persistence with Peewee and sqlite
-	delete the database to start over 
+	delete the database to start over
 		(but running this program does not require it)
-				
+
 	Person:
 
 		1. add a new record and delete it
-		
+
 """
 import logging
 from personjob_model import *

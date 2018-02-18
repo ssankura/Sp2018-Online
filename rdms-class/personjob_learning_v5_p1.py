@@ -1,9 +1,9 @@
 """
 	Learning persistence with Peewee and sqlite
-	delete the database to start over 
+	delete the database to start over
 		(but running this program does not require it)
-		
-		
+
+
 """
 
 from personjob_model import *
@@ -12,12 +12,12 @@ logger.info('Working with Job class')
 
 logger.info('Creating Job records: just like Person. We use the foreign key')
 
-JOB_NAME = 0 
+JOB_NAME = 0
 START_DATE = 1
 END_DATE = 2
 SALARY = 3
 PERSON_EMPLOYED = 4
-	
+
 jobs = [
 	('Analyst', '2001-09-22', '2003-01-30',65500, 'Andrew'),
 	('Senior analyst', '2003-02-01', '2006-10-22', 70000, 'Andrew'),
@@ -28,7 +28,7 @@ jobs = [
 
 for job in jobs:
 	try:
-		with database.transaction():        
+		with database.transaction():
 			new_job = Job.create(
 				job_name = job[JOB_NAME],
 				start_date = job[START_DATE],

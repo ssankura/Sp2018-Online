@@ -1,21 +1,21 @@
 """
 	Learning persistence with Peewee and sqlite
-	delete the database to start over 
+	delete the database to start over
 		(but running this program does not require it)
-		
-		
+
+
 """
 
 from personjob_model import *
 
 logger.info('Working with Job class')
 
-JOB_NAME = 0 
+JOB_NAME = 0
 START_DATE = 1
 END_DATE = 2
 SALARY = 3
 PERSON_EMPLOYED = 4
-	
+
 logger.info('Now resolve the join and print (INNER shows only jobs that match person)...')
 logger.info('Notice how we use a query variable in this case')
 logger.info('We select the classes we need, and we join Person to Job')

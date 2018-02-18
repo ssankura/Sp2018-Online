@@ -1,15 +1,15 @@
 """
     Learning persistence with Peewee and sqlite
-    delete the database to start over 
+    delete the database to start over
         (but running this program does not require it)
-        
+
     Person:
         1. insert records
         2. display all records
         3. show transactions
         4. show error checking
-        5. show logging (to explain what's going on)  
-        
+        5. show logging (to explain what's going on)
+
 """
 
 from personjob_model import *
@@ -27,7 +27,7 @@ people = [
     ('Peter', 'Seattle', None),
     ('Susan', 'Boston', 'Beannie'),
     ('Pam', 'Coventry', 'PJ'),
-    ('Steven', 'Colchester', None), 
+    ('Steven', 'Colchester', None),
     ]
 
 logger.info('Creating Person records: iterate through the list of tuples')

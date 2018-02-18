@@ -1,9 +1,9 @@
 """
 	Learning persistence with Peewee and sqlite
-	delete the database to start over 
+	delete the database to start over
 		(but running this program does not require it)
-		
-		
+
+
 """
 
 from personjob_model import *
@@ -24,12 +24,12 @@ logger.info('group_by and order_by control level and sorting')
 
 query = (Person
          .select(Person, fn.COUNT(Job.job_name).alias('job_count'))
-         .join(Job, JOIN.LEFT_OUTER) 
+         .join(Job, JOIN.LEFT_OUTER)
          .group_by(Person)
          .order_by(Person.person_name))
 
 for person in query:
     logger.info(f'{person.person_name} had {person.job_count} jobs')
-        
+
 
 database.close()
