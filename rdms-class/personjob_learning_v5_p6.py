@@ -5,8 +5,12 @@
 
 
 """
+from personjob_modeli import *
+
 import logging
-from personjob_model import *
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 logger.info('Working with Person class')
 logger.info('Note how I use constants and a list of tuples as a simple schema')

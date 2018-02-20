@@ -8,8 +8,9 @@
         1. filter records and display
 
 """
+from personjob_modeli import *
+
 import logging
-from personjob_model import *
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

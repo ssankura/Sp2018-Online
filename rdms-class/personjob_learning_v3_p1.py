@@ -12,7 +12,12 @@
 
 """
 
-from personjob_model import *
+from personjob_modeli import *
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 logger.info('Working with Person class')
 logger.info('Note how I use constants and a list of tuples as a simple schema')
@@ -47,7 +52,7 @@ for person in people:
     except Exception as e:
         logger.info(f'Error creating = {person[PERSON_NAME]}')
         logger.info(e)
-        logger.info('See how the datbase protects our data')
+        logger.info('See how the database protects our data')
 
 logger.info('Read and print all Person records we created...')
 

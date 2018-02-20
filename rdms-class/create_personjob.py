@@ -1,7 +1,14 @@
 """
-	Create database examle with Peewee ORM, sqlite and Python
+    Create database examle with Peewee ORM, sqlite and Python
 
 """
+
+from personjob_modeli import *
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 from personjob_model import *
 

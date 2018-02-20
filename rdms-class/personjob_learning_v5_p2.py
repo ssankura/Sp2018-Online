@@ -6,7 +6,12 @@
 
 """
 
-from personjob_model import *
+from personjob_modeli import *
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 logger.info('Working with Job class')
 
@@ -19,7 +24,7 @@ PERSON_EMPLOYED = 4
 logger.info('Now resolve the join and print (INNER shows only jobs that match person)...')
 logger.info('Notice how we use a query variable in this case')
 logger.info('We select the classes we need, and we join Person to Job')
-logger.info('Inner join (which is the default) shows onyl records that match')
+logger.info('Inner join (which is the default) shows only records that match')
 
 query = (Person
          .select(Person, Job)

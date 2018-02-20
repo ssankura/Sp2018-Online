@@ -8,15 +8,16 @@
 		1. add a new record and delete it
 
 """
+from personjob_modeli import *
+
 import logging
-from personjob_model import *
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 PERSON_NAME = 0
 LIVES_IN_TOWN = 1
 NICKNAME = 2
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 logger.info('Add and display a Person called Fred; then delete him...')
 

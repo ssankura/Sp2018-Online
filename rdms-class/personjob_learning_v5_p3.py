@@ -6,9 +6,15 @@
 
 """
 
-from personjob_model import *
+from personjob_modeli import *
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 logger.info('View matching records and Persons without Jobs (note LEFT_OUTER)')
+
 
 query = (Person
          .select(Person, Job)
@@ -16,7 +22,11 @@ query = (Person
         )
 
 for person in query:
-    logger.info(f'Person {person.person_name} had job {person.job.job_name}')
+    try:
+        logger.info(f'Person {person.person_name} had job {person.job.job_name}')
+
+    except Exception as e:
+        logger.info(f'Person {person.person_name} had no job')
 
 logger.info('Example of how to summarize data')
 logger.info('Note select() creates a count and names it job_count')

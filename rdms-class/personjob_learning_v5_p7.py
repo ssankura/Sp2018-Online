@@ -5,13 +5,17 @@
 
 
 """
+from personjob_modeli import *
+
 import logging
-from personjob_model import *
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 logger.info("Back to Person class: try to change Peter's name")
 
 aperson = Person.get(Person.person_name == 'Peter')
-logger.info(f'Curent value is {aperson.person_name}')
+logger.info(f'Current value is {aperson.person_name}')
 
 logger.info('Update Peter to Peta, thereby trying to change the PK...')
 
