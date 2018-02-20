@@ -17,7 +17,25 @@ logger.info('The next 3 lines of code are the only database specific code')
 
 database = SqliteDatabase('personjob.db')
 database.connect()
-database.execute_sql('PRAGMA foreign_keys = ON;')
+database.execute_sql('PRAGMA foreign_keys = ON;') # needed for sqlite only
+
+# if you wanted to use heroku postgres:
+#
+# psycopg2
+#
+# parse.uses_netloc.append("postgres")
+# url = parse.urlparse(os.environ["DATABASE_URL"])
+#
+# conn = psycopg2.connect(
+# database=url.path[1:],
+# user=url.username,
+# password=url.password,
+# host=url.hostname,
+# port=url.port
+# )
+# database = conn.cursor()
+#
+# Also consider elephantsql.com (be sure to use configparser for PWß)
 
 logger.info('This means we can easily switch to a different database')
 
