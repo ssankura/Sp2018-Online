@@ -3,7 +3,7 @@
 
 """
 
-from personjob_modeli import *
+from personjob_model import *
 
 import logging
 
