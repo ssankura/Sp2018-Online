@@ -1,6 +1,6 @@
 """
-	Simple database examle with Peewee ORM, sqlite and Python
-	Here we define the schema
+    Simple database examle with Peewee ORM, sqlite and Python
+    Here we define the schema
     Use logging for messages so they can be turned off
 
 """
@@ -18,8 +18,8 @@ class BaseModel(Model):
 
 class Person(BaseModel):
     """
-		This class defines Person, which maintains details of someone
-		for whom we want to research career to date.
+        This class defines Person, which maintains details of someone
+        for whom we want to research career to date.
     """
     person_name = CharField(primary_key = True, max_length = 30)
     lives_in_town = CharField(max_length = 40)
@@ -27,8 +27,8 @@ class Person(BaseModel):
 
 class Job(BaseModel):
     """
-		This class defines Job, which maintains details of past Jobs
-		held by a Person.
+        This class defines Job, which maintains details of past Jobs
+        held by a Person.
     """
     job_name = CharField(primary_key = True, max_length = 30)
     start_date = DateField(formats = 'YYYY-MM-DD')
@@ -38,8 +38,8 @@ class Job(BaseModel):
 
 class PersonNumKey(BaseModel):
     """
-		This class defines Person, which maintains details of someone
-		for whom we want to research career to date.
+        This class defines Person, which maintains details of someone
+        for whom we want to research career to date.
     """
     person_name = CharField(max_length = 30)
     lives_in_town = CharField(max_length = 40)

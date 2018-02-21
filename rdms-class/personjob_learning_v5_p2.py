@@ -1,7 +1,7 @@
 """
-	Learning persistence with Peewee and sqlite
-	delete the database to start over
-		(but running this program does not require it)
+    Learning persistence with Peewee and sqlite
+    delete the database to start over
+        (but running this program does not require it)
 
 
 """
@@ -29,12 +29,12 @@ logger.info('Inner join (which is the default) shows only records that match')
 query = (Person
          .select(Person, Job)
          .join(Job, JOIN.INNER)
-		)
+        )
 
 logger.info('View matching records from both tables')
 
 for person in query:
-	logger.info(f'Person {person.person_name} had job {person.job.job_name}')
+    logger.info(f'Person {person.person_name} had job {person.job.job_name}')
 
 
 database.close()

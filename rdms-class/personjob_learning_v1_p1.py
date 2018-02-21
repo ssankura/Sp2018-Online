@@ -7,8 +7,8 @@ with open('people.csv', 'w') as people:
     peoplewriter.writerow(peopledata)
 
 """
-	Creates a file that looks like this:
+    Creates a file that looks like this:
 
-	John,502-77-3056,2/27/1985,117.45
+    John,502-77-3056,2/27/1985,117.45
 
 """

@@ -1,7 +1,7 @@
 """
-	Learning persistence with Peewee and sqlite
-	delete the database to start over
-		(but running this program does not require it)
+    Learning persistence with Peewee and sqlite
+    delete the database to start over
+        (but running this program does not require it)
 
 
 """

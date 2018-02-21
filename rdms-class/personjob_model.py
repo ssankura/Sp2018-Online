@@ -1,6 +1,6 @@
 """
-	Simple database example with Peewee ORM, sqlite and Python
-	Here we define the schema
+    Simple database example with Peewee ORM, sqlite and Python
+    Here we define the schema
     Use logging for messages so they can be turned off
 
 """
@@ -49,8 +49,8 @@ logger.info('By inheritance only we keep our model (almost) technology neutral')
 
 class Person(BaseModel):
     """
-		This class defines Person, which maintains details of someone
-		for whom we want to research career to date.
+        This class defines Person, which maintains details of someone
+        for whom we want to research career to date.
     """
     logger.info('Note how we defined the class')
 
@@ -62,8 +62,8 @@ class Person(BaseModel):
 
 class Job(BaseModel):
     """
-		This class defines Job, which maintains details of past Jobs
-		held by a Person.
+        This class defines Job, which maintains details of past Jobs
+        held by a Person.
     """
     logger.info('Now the Job class with a simlar approach')
     job_name = CharField(primary_key = True, max_length = 30)
@@ -77,8 +77,8 @@ class Job(BaseModel):
 
 class PersonNumKey(BaseModel):
     """
-		This class defines Person, which maintains details of someone
-		for whom we want to research career to date.
+        This class defines Person, which maintains details of someone
+        for whom we want to research career to date.
     """
     logger.info('An alternate Person class')
     logger.info("Note: no primary key so we're give one 'for free'")

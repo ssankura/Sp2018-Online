@@ -1,11 +1,11 @@
 """
-	Learning persistence with Peewee and sqlite
-	delete the database to start over
-		(but running this program does not require it)
+    Learning persistence with Peewee and sqlite
+    delete the database to start over
+        (but running this program does not require it)
 
-	Person:
+    Person:
 
-		1. add a new record and delete it
+        1. add a new record and delete it
 
 """
 from personjob_modeli import *
@@ -24,9 +24,9 @@ logger.info('Add and display a Person called Fred; then delete him...')
 logger.info('Add Fred in one step')
 
 new_person = Person.create(
-	person_name = 'Fred',
-	lives_in_town = 'Seattle',
-	nickname = 'Fearless')
+    person_name = 'Fred',
+    lives_in_town = 'Seattle',
+    nickname = 'Fearless')
 new_person.save()
 
 logger.info('Show Fred')
@@ -40,6 +40,6 @@ aperson.delete_instance()
 logger.info('Reading and print all Person records (but not Fred; he has been deleted)...')
 
 for person in Person:
-	logger.info(f'{person.person_name} lives in {person.lives_in_town} and likes to be known as {person.nickname}')
+    logger.info(f'{person.person_name} lives in {person.lives_in_town} and likes to be known as {person.nickname}')
 
 database.close()
