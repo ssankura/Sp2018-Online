@@ -1,4 +1,4 @@
-# Spring Online Class Repository
+# Spring Python Online UW Class Repository
 
 ## Structure of the Repo
 
