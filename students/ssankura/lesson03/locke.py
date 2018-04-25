@@ -15,7 +15,6 @@ class Locke(object):
 	def __exit__(self, type, value, tb):
 		print ("********* Exiting the Locke  *********")
 		self.printUserMessage()
-		return self
 
 	def move_boats_through(self, num_boats):
 		if num_boats > self.capacity_boats:
