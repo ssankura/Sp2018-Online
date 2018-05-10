@@ -1,0 +1,33 @@
+#This is a capture on the Sys Logs on the remote server
+
+Sireeshas-MacBook-Pro:lesson05 sireesha$ sudo python syslogserver.py 
+Password:
+127.0.0.1 :  <12>2018-05-09 22:43:30,686 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 22:43:30,686 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 22:43:46,009 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 22:43:46,009 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 22:56:45,746 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 22:56:45,746 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 22:56:54,674 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 22:56:54,674 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 23:12:26,034 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 23:12:26,034 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 23:12:30,249 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 23:12:30,249 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 23:12:33,641 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 23:12:33,641 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 23:12:45,779 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 23:12:45,779 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 23:12:47,993 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 23:12:47,993 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-09 23:12:49,775 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-09 23:12:49,776 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-10 10:11:26,559 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-10 10:11:26,559 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-10 10:11:28,048 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-10 10:11:28,048 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-10 10:11:29,325 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-10 10:11:29,325 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+127.0.0.1 :  <12>2018-05-10 10:11:30,596 simple_logging.py:31  WARNING The value of i is 50.
+127.0.0.1 :  <11>2018-05-10 10:11:30,596 simple_logging.py:35  ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+
