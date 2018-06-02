@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+# Mac files
+.DS_Store
+
+>>>>>>> 6367380371726fcd88018a166c37be77a3c594fe
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -24,7 +30,10 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+<<<<<<< HEAD
 __pycache__/
+=======
+>>>>>>> 6367380371726fcd88018a166c37be77a3c594fe
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
