@@ -1,0 +1,91 @@
+(venv) Sireeshas-MacBook-Pro:mailroom sireesha$ python mailroom.py
+INFO:mailroom_db_model:Donor Object
+INFO:mailroom_db_model:Donation Object
+********** MAIN MENU **********
+1 - Send a Thank You
+2 - Create a Report
+3 - Sent letters to everyone
+4 - Quit
+Enter 1 or 2 or 3 or 4 to select a Menu item > 2
+Donor Name                     | Total Given  | Num Gifts | Average Gift
+------------------------------------------------------------------------
+Mark Zuckerberg                 $ 197001.00           5    $  39400.20
+Jeff Bezos                      $ 589902.90           5    $ 117980.58
+William Gates                   $ 211001.00           3    $  70333.67
+J K Rowling                     $ 335301.50           3    $ 111767.17
+Warren Buffett                  $ 575000.00           2    $ 287500.00
+********** MAIN MENU **********
+1 - Send a Thank You
+2 - Create a Report
+3 - Sent letters to everyone
+4 - Quit
+Enter 1 or 2 or 3 or 4 to select a Menu item > 1
+Enter the Full Name of the Donor > list
+List of Donors:
+Mark Zuckerberg                Jeff Bezos                     William Gates                  J K Rowling                    Warren Buffett                 
+Enter the Full Name of the Donor > Sudha Murthy
+Enter the Amount of donation > 20000.00
+Dear Sudha Murthy, 
+ 	 Thank You for your very kind donation of $20000.0. It will be put to very good use. 
+ 	 	 Sincerely, 
+ 	 	 	 The Team
+********** MAIN MENU **********
+1 - Send a Thank You
+2 - Create a Report
+3 - Sent letters to everyone
+4 - Quit
+Enter 1 or 2 or 3 or 4 to select a Menu item > 2
+Donor Name                     | Total Given  | Num Gifts | Average Gift
+------------------------------------------------------------------------
+Mark Zuckerberg                 $ 197001.00           5    $  39400.20
+Jeff Bezos                      $ 589902.90           5    $ 117980.58
+William Gates                   $ 211001.00           3    $  70333.67
+J K Rowling                     $ 335301.50           3    $ 111767.17
+Warren Buffett                  $ 575000.00           2    $ 287500.00
+Sudha Murthy                    $  20000.00           1    $  20000.00
+********** MAIN MENU **********
+1 - Send a Thank You
+2 - Create a Report
+3 - Sent letters to everyone
+4 - Quit
+Enter 1 or 2 or 3 or 4 to select a Menu item > 1
+Enter the Full Name of the Donor > William Gates
+Enter the Amount of donation > 85000.00
+Dear William Gates, 
+ 	 Thank You for your very kind donation of $85000.0. It will be put to very good use. 
+ 	 	 Sincerely, 
+ 	 	 	 The Team
+********** MAIN MENU **********
+1 - Send a Thank You
+2 - Create a Report
+3 - Sent letters to everyone
+4 - Quit
+Enter 1 or 2 or 3 or 4 to select a Menu item > 2
+Donor Name                     | Total Given  | Num Gifts | Average Gift
+------------------------------------------------------------------------
+Mark Zuckerberg                 $ 197001.00           5    $  39400.20
+Jeff Bezos                      $ 589902.90           5    $ 117980.58
+William Gates                   $ 296001.00           4    $  74000.25
+J K Rowling                     $ 335301.50           3    $ 111767.17
+Warren Buffett                  $ 575000.00           2    $ 287500.00
+Sudha Murthy                    $  20000.00           1    $  20000.00
+********** MAIN MENU **********
+1 - Send a Thank You
+2 - Create a Report
+3 - Sent letters to everyone
+4 - Quit
+Enter 1 or 2 or 3 or 4 to select a Menu item > 3
+Generated letter with file name Mark Zuckerberg.txt for Donor Mark Zuckerberg
+Generated letter with file name Jeff Bezos.txt for Donor Jeff Bezos
+Generated letter with file name William Gates.txt for Donor William Gates
+Generated letter with file name J K Rowling.txt for Donor J K Rowling
+Generated letter with file name Warren Buffett.txt for Donor Warren Buffett
+Generated letter with file name Sudha Murthy.txt for Donor Sudha Murthy
+********** MAIN MENU **********
+1 - Send a Thank You
+2 - Create a Report
+3 - Sent letters to everyone
+4 - Quit
+Enter 1 or 2 or 3 or 4 to select a Menu item > 4
+Exiting the program based on User Selection
+(venv) Sireeshas-MacBook-Pro:mailroom sireesha$ 
