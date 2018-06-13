@@ -1,0 +1,266 @@
+2018-06-13 01:48:00 - INFO - Here is where we use the connect to redis.
+2018-06-13 01:48:00 - INFO - Mongodb example to use data from Furniture module, so get it
+2018-06-13 01:48:00 - INFO - *** START MONGO DB SCRIPT ****
+Here is where we use the connect to mongodb.
+2018-06-13 01:48:00 - INFO - Here is where we use the connect to mongodb.
+2018-06-13 01:48:00 - INFO - Note use of f string to embed the user & password (from the tuple).
+2018-06-13 01:48:00 - INFO - Step 1: We are going to use a database called dev
+2018-06-13 01:48:00 - INFO - But if it doesnt exist mongodb creates it
+2018-06-13 01:48:00 - INFO - And in that database use a collection called furniture
+2018-06-13 01:48:00 - INFO - If it doesnt exist mongodb creates it
+2018-06-13 01:48:00 - INFO - Step 2: Now we add data from the dictionary above
+2018-06-13 01:48:04 - INFO - Step 3: Find the products that are described as plastic
+<pymongo.cursor.Cursor object at 0x101b76f60>
+2018-06-13 01:48:04 - INFO - Step 4: Print the plastic products
+2018-06-13 01:48:04 - INFO -  Product: Brown Coffee table, Description: Plastic, Monthly Rental: 2.5, In Stock Qty: 25
+2018-06-13 01:48:04 - INFO -  Product: Brown Chair, Description: Plastic, Monthly Rental: 1.0, In Stock Qty: 45
+2018-06-13 01:48:04 - INFO - Step 5: Delete the blue couch (actually deletes all blue couches)
+2018-06-13 01:48:04 - INFO - Step 6: Check it is deleted with a query and print
+2018-06-13 01:48:05 - INFO - The blue couch is deleted, print should show none:
+2018-06-13 01:48:05 - INFO - None
+2018-06-13 01:48:05 - INFO - Step 6.1 : print all data after deleting Blue couch
+2018-06-13 01:48:05 - INFO -  Product: Red couch, Description: Leather low back, Monthly Rental: 12.99, In Stock Qty: 10
+2018-06-13 01:48:05 - INFO -  Product: Brown Coffee table, Description: Plastic, Monthly Rental: 2.5, In Stock Qty: 25
+2018-06-13 01:48:05 - INFO -  Product: Red couch, Description: Leather high back, Monthly Rental: 15.99, In Stock Qty: 17
+2018-06-13 01:48:05 - INFO -  Product: Blue recliner, Description: Leather high back, Monthly Rental: 19.99, In Stock Qty: 6
+2018-06-13 01:48:05 - INFO -  Product: Brown Chair, Description: Plastic, Monthly Rental: 1.0, In Stock Qty: 45
+2018-06-13 01:48:05 - INFO -  Product: Black couch, Description: Leather high back, Monthly Rental: 29.99, In Stock Qty: 6
+2018-06-13 01:48:05 - INFO - Step 7: Find multiple documents, iterate though the results and print products whose rental > 15.00
+Results of search
+2018-06-13 01:48:05 - INFO - Notice how we parse out the data from the document
+2018-06-13 01:48:06 - INFO - Product: Red couch, Description: Leather high back, Rental Cost: 15.99, In Stock Qty: 17
+2018-06-13 01:48:06 - INFO - Product: Blue recliner, Description: Leather high back, Rental Cost: 19.99, In Stock Qty: 6
+2018-06-13 01:48:06 - INFO - Product: Black couch, Description: Leather high back, Rental Cost: 29.99, In Stock Qty: 6
+2018-06-13 01:48:06 - INFO - Step 8: Find all products where color = Red
+Results of search:
+2018-06-13 01:48:06 - INFO - Product: Red couch, Description: Leather high back, Rental Cost: 12.99, In Stock Qty: 10
+2018-06-13 01:48:06 - INFO - Product: Red couch, Description: Leather high back, Rental Cost: 15.99, In Stock Qty: 17
+2018-06-13 01:48:06 - INFO - Step 9: Find all products where type = couch
+2018-06-13 01:48:06 - INFO - Results of search:
+2018-06-13 01:48:06 - INFO - Product: Red couch, Description: Leather high back, Rental Cost: 12.99, In Stock Qty: 10
+2018-06-13 01:48:06 - INFO - Product: Red couch, Description: Leather high back, Rental Cost: 15.99, In Stock Qty: 17
+2018-06-13 01:48:06 - INFO - Product: Black couch, Description: Leather high back, Rental Cost: 29.99, In Stock Qty: 6
+2018-06-13 01:48:06 - INFO - Step 10: Delete the collection so we can start over
+2018-06-13 01:48:07 - INFO - *** END MONGO DB SCRIPT ****
+2018-06-13 01:48:07 - INFO - Other databases use data embedded in the modules
+2018-06-13 01:48:07 - INFO - *** START REDIS SCRIPT ****
+2018-06-13 01:48:07 - INFO - ****Step 1: connect to Redis
+2018-06-13 01:48:07 - INFO - Step 2: cache some data in Redis
+2018-06-13 01:48:08 - INFO - Step 2: now I can read data for first customer
+2018-06-13 01:48:09 - INFO - Customer Name: None, Phone: None, Email Id: None, ZipCode: None
+2018-06-13 01:48:09 - INFO - Step 3: Cache data for more five more customers in Redis
+2018-06-13 01:48:11 - INFO - Step 4: now I can read data for five more customers
+2018-06-13 01:48:13 - INFO - Customer Name: pam, Phone: 650-981-1872, Email Id: pam@somewhere.com, ZipCode: 85286
+2018-06-13 01:48:15 - INFO - Customer Name: fred, Phone: 480-891-2534, Email Id: fred@fearless.com, ZipCode: 85226
+2018-06-13 01:48:16 - INFO - Customer Name: bob, Phone: 310-671-0912, Email Id: bob@mail.com, ZipCode: 57651
+2018-06-13 01:48:18 - INFO - Customer Name: amanda, Phone: 210-982-8145, Email Id: amanda@somemail.com, ZipCode: 10025
+2018-06-13 01:48:19 - INFO - Customer Name: jennifer, Phone: 623-450-9810, Email Id: jennifer@somemail.com, ZipCode: 87901
+2018-06-13 01:48:19 - INFO - Step 5: delete all customer data from cache
+2018-06-13 01:48:20 - INFO -  Customer: andy, Count of list items in Redis Cache before deletion: 4
+2018-06-13 01:48:22 - INFO -  Customer: andy, Count of list items in Redis Cache after deletion: 0
+2018-06-13 01:48:24 - INFO -  Customer: pam, Count of list items in Redis Cache before deletion: 4
+2018-06-13 01:48:26 - INFO -  Customer: pam, Count of list items in Redis Cache after deletion: 0
+2018-06-13 01:48:28 - INFO -  Customer: fred, Count of list items in Redis Cache before deletion: 4
+2018-06-13 01:48:30 - INFO -  Customer: fred, Count of list items in Redis Cache after deletion: 0
+2018-06-13 01:48:31 - INFO -  Customer: bob, Count of list items in Redis Cache before deletion: 4
+2018-06-13 01:48:33 - INFO -  Customer: bob, Count of list items in Redis Cache after deletion: 0
+2018-06-13 01:48:34 - INFO -  Customer: amanda, Count of list items in Redis Cache before deletion: 4
+2018-06-13 01:48:36 - INFO -  Customer: amanda, Count of list items in Redis Cache after deletion: 0
+2018-06-13 01:48:37 - INFO -  Customer: jennifer, Count of list items in Redis Cache before deletion: 4
+2018-06-13 01:48:39 - INFO -  Customer: jennifer, Count of list items in Redis Cache after deletion: 0
+2018-06-13 01:48:39 - INFO - Step 6: Redis can maintain a unique ID or count very efficiently
+2018-06-13 01:48:40 - INFO - I could use this to generate unique ids
+2018-06-13 01:48:40 - INFO - Redis says 21+1+1-1=22
+2018-06-13 01:48:40 - INFO - Step 7: richer data for a SKU
+2018-06-13 01:48:42 - INFO - Step 8: pull some data from the structure
+2018-06-13 01:48:42 - INFO - Type of cover = leather
+2018-06-13 01:48:42 - INFO - *** END REDIS SCRIPT ****
+2018-06-13 01:48:42 - INFO - *** START NEO4J SCRIPT ****
+2018-06-13 01:48:42 - INFO - Step 1: First, clear the entire database, so we can start over
+2018-06-13 01:48:42 - INFO - Running clear_all
+2018-06-13 01:48:42 - INFO - Here is where we use the connect to neo4j.
+2018-06-13 01:48:42 - INFO - 
+2018-06-13 01:48:44 - INFO - Step 2: Add a few people
+2018-06-13 01:48:44 - INFO - Adding a few Person nodes
+2018-06-13 01:48:44 - INFO - The cyph language is analagous to sql for neo4j
+2018-06-13 01:48:45 - INFO - Step 3: Get all of people in the DB:
+People in database:
+[('Bob', 'Jones'), ('Nancy', 'Cooper'), ('Alice', 'Cooper'), ('Fred', 'Barnes'), ('Mary', 'Evans'), ('Marie', 'Curie'), ('Sireesha', 'Sankuratripati'), ('William', 'Gates')]
+2018-06-13 01:48:45 - INFO - Step 4: Adding some colors in the DB:
+2018-06-13 01:48:47 - INFO - Step 5: Get all of colors in the DB:
+2018-06-13 01:48:47 - INFO - Colors in database:
+['Pink', 'Blue', 'Black', 'Yellow', 'Green', 'Red', 'White']
+2018-06-13 01:48:47 - INFO - Step 6: Create some relationships - People and Colors
+2018-06-13 01:48:47 - INFO - Adding Favorite color for Bob Jones as Green
+2018-06-13 01:48:47 - INFO - Adding Favorite color for Nancy Cooper as Red
+2018-06-13 01:48:47 - INFO - Adding Favorite color for Alice Cooper as Black
+2018-06-13 01:48:48 - INFO - Adding Favorite color for Fred Barnes as Blue
+2018-06-13 01:48:48 - INFO - Adding Favorite color for Mary Evans as Red
+2018-06-13 01:48:48 - INFO - Adding Favorite color for Marie Curie as Yellow
+2018-06-13 01:48:48 - INFO - Adding Favorite color for Sireesha Sankuratripati as Red
+2018-06-13 01:48:48 - INFO - Adding Favorite color for William Gates as Yellow
+2018-06-13 01:48:48 - INFO - Adding Favorite color for Bob Jones as Blue
+2018-06-13 01:48:48 - INFO - Adding Favorite color for Nancy Cooper as Black
+2018-06-13 01:48:48 - INFO - Adding Favorite color for Alice Cooper as Green
+2018-06-13 01:48:48 - INFO - Adding Favorite color for Fred Barnes as Green
+2018-06-13 01:48:49 - INFO - Adding Favorite color for Mary Evans as Green
+2018-06-13 01:48:49 - INFO - Adding Favorite color for Marie Curie as Blue
+2018-06-13 01:48:49 - INFO - Adding Favorite color for Sireesha Sankuratripati as Black
+2018-06-13 01:48:49 - INFO - Adding Favorite color for William Gates as Green
+2018-06-13 01:48:49 - INFO - Step 7: Print the relationships - the favorite colors for ALL the People
+2018-06-13 01:48:49 - INFO - Favorite colors for Bob Jones are : Blue, Green
+2018-06-13 01:48:50 - INFO - Favorite colors for Nancy Cooper are : Black, Red
+2018-06-13 01:48:50 - INFO - Favorite colors for Alice Cooper are : Green, Black
+2018-06-13 01:48:50 - INFO - Favorite colors for Fred Barnes are : Green, Blue
+2018-06-13 01:48:50 - INFO - Favorite colors for Mary Evans are : Green, Red
+2018-06-13 01:48:51 - INFO - Favorite colors for Marie Curie are : Blue, Yellow
+2018-06-13 01:48:51 - INFO - Favorite colors for Sireesha Sankuratripati are : Black, Red
+2018-06-13 01:48:51 - INFO - Favorite colors for William Gates are : Green, Yellow
+2018-06-13 01:48:51 - INFO - Step 8: Create some relationships - Friends
+2018-06-13 01:48:51 - INFO - Bob Jones likes Alice Cooper, Fred Barnes and Marie Curie
+2018-06-13 01:48:52 - INFO - Step 9: Find all of Bob's friends
+Bob's friends are:
+Marie Curie
+Fred Barnes
+Alice Cooper
+2018-06-13 01:48:52 - INFO - Setting up Marie's friends
+Step 10: Find all of Marie's friends?
+
+Marie's friends are:
+Fred Barnes
+Alice Cooper
+Mary Evans
+Fred Barnes
+Alice Cooper
+Mary Evans
+2018-06-13 01:48:53 - INFO - *** END NEO4J SCRIPT ****
+2018-06-13 01:48:53 - INFO - 
+
+====
+2018-06-13 01:48:53 - INFO - Step 1: Demonstrate persistence with pickle
+2018-06-13 01:48:53 - INFO - Write a pickle file with the furniture data
+2018-06-13 01:48:53 - INFO - Step 2: Now read it back from the pickle file
+2018-06-13 01:48:53 - INFO - Step 3: Show that the write and read were successful
+2018-06-13 01:48:53 - INFO - and print the data
+[{'_id': ObjectId('5b202a7823dd00261b34dba0'),
+  'color': 'Red',
+  'description': 'Leather low back',
+  'in_stock_quantity': 10,
+  'monthly_rental_cost': 12.99,
+  'product_type': 'couch'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba1'),
+  'color': 'Blue',
+  'description': 'Cloth high back',
+  'in_stock_quantity': 3,
+  'monthly_rental_cost': 9.99,
+  'product_type': 'couch'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba2'),
+  'color': 'Brown',
+  'description': 'Plastic',
+  'in_stock_quantity': 25,
+  'monthly_rental_cost': 2.5,
+  'product_type': 'Coffee table'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba3'),
+  'color': 'Red',
+  'description': 'Leather high back',
+  'in_stock_quantity': 17,
+  'monthly_rental_cost': 15.99,
+  'product_type': 'couch'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba4'),
+  'color': 'Blue',
+  'description': 'Leather high back',
+  'in_stock_quantity': 6,
+  'monthly_rental_cost': 19.99,
+  'product_type': 'recliner'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba5'),
+  'color': 'Brown',
+  'description': 'Plastic',
+  'in_stock_quantity': 45,
+  'monthly_rental_cost': 1.0,
+  'product_type': 'Chair'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba6'),
+  'color': 'Black',
+  'description': 'Leather high back',
+  'in_stock_quantity': 6,
+  'monthly_rental_cost': 29.99,
+  'product_type': 'couch'}]
+2018-06-13 01:48:53 - INFO - 
+
+====
+2018-06-13 01:48:53 - INFO - Step 4: Demonstrate working with shelve
+2018-06-13 01:48:53 - INFO - Step 5: store data at key
+2018-06-13 01:48:53 - INFO - Step 6: Now retrieve a COPY of data at key
+2018-06-13 01:48:53 - INFO - Check it worked
+2018-06-13 01:48:53 - INFO - And now print the copy
+[{'_id': ObjectId('5b202a7823dd00261b34dba0'),
+  'color': 'Red',
+  'description': 'Leather low back',
+  'in_stock_quantity': 10,
+  'monthly_rental_cost': 12.99,
+  'product_type': 'couch'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba1'),
+  'color': 'Blue',
+  'description': 'Cloth high back',
+  'in_stock_quantity': 3,
+  'monthly_rental_cost': 9.99,
+  'product_type': 'couch'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba2'),
+  'color': 'Brown',
+  'description': 'Plastic',
+  'in_stock_quantity': 25,
+  'monthly_rental_cost': 2.5,
+  'product_type': 'Coffee table'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba3'),
+  'color': 'Red',
+  'description': 'Leather high back',
+  'in_stock_quantity': 17,
+  'monthly_rental_cost': 15.99,
+  'product_type': 'couch'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba4'),
+  'color': 'Blue',
+  'description': 'Leather high back',
+  'in_stock_quantity': 6,
+  'monthly_rental_cost': 19.99,
+  'product_type': 'recliner'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba5'),
+  'color': 'Brown',
+  'description': 'Plastic',
+  'in_stock_quantity': 45,
+  'monthly_rental_cost': 1.0,
+  'product_type': 'Chair'},
+ {'_id': ObjectId('5b202a7823dd00261b34dba6'),
+  'color': 'Black',
+  'description': 'Leather high back',
+  'in_stock_quantity': 6,
+  'monthly_rental_cost': 29.99,
+  'product_type': 'couch'}]
+2018-06-13 01:48:53 - INFO - Step 7: delete data stored at key to cleanup and close
+2018-06-13 01:48:53 - INFO - 
+
+====
+2018-06-13 01:48:53 - INFO - Step 8: Write csv file
+2018-06-13 01:48:53 - INFO - Step 9: Read csv file back
+["('John', 'second guitar', 117.45)",
+ "('Paul', 'bass', 22.01)",
+ "('George', 'lead guitar', 45.99)",
+ "('Ringo', 'drume', 77.0)",
+ "('Roger', 'vocals', 12.5)",
+ "('Keith', 'drums', 6.25)",
+ "('Pete', 'guitar', 0.1)",
+ "('John', 'bass', 89.71)"]
+2018-06-13 01:48:53 - INFO - 
+
+====
+2018-06-13 01:48:53 - INFO - Step 10: Look at working with json data
+2018-06-13 01:48:53 - INFO - Step 11: Return json string from an object
+2018-06-13 01:48:53 - INFO - Step 12: Print the json
+('[{"product": "Red couch", "description": "Leather low back"}, {"product": '
+ '"Blue couch", "description": "Cloth high back"}, {"product": "Coffee table", '
+ '"description": "Plastic"}, {"product": "Red couch", "description": "Leather '
+ 'high back"}]')
+2018-06-13 01:48:53 - INFO - Step 13: Returns an object from a json string representation
+2018-06-13 01:48:53 - INFO - Step 14: print the string
+[{'description': 'Leather low back', 'product': 'Red couch'},
+ {'description': 'Cloth high back', 'product': 'Blue couch'},
+ {'description': 'Plastic', 'product': 'Coffee table'},
+ {'description': 'Leather high back', 'product': 'Red couch'}]
