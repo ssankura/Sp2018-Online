@@ -38,7 +38,7 @@ def get_articles(source):
               }
     print("requesting", source)
     resp = requests.get(url, params = params)
-    if resp.json()['status'] == 200:
+    if resp.json()['status'] != 200:
         print(f'something went wrong. {source}')
         print (f'printing resp {resp.json()}')
         return []
